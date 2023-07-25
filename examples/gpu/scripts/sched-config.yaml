@@ -1,0 +1,12 @@
+apiVersion: kubescheduler.config.k8s.io/v1beta3
+kind: KubeSchedulerConfiguration
+clientConnection:
+  kubeconfig: /Users/ashutosh/.kube/config
+profiles:
+  - schedulerName: default-scheduler
+    plugins:
+      filter:
+        enabled:
+          - name: wasm
+    pluginConfig:
+      - name: wasm

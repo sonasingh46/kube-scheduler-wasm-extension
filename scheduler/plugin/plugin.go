@@ -41,6 +41,7 @@ var _ frameworkruntime.PluginFactory = New
 // New initializes a new plugin and returns it.
 func New(configuration runtime.Object, frameworkHandle framework.Handle) (framework.Plugin, error) {
 	config := PluginConfig{}
+	config.GuestPath = "/Users/ashutosh/projects/sigs.k8s.io/kube-scheduler-wasm-extension/scheduler/cmd/scheduler/main.wasm"
 	if err := frameworkruntime.DecodeInto(configuration, &config); err != nil {
 		return nil, fmt.Errorf("failed to decode into %s PluginConfig: %w", PluginName, err)
 	}
