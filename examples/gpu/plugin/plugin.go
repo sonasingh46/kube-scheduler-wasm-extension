@@ -40,7 +40,7 @@ type GPU struct {
 }
 
 // EventsToRegister implements api.EnqueueExtensions
-func (g *GPU) EventsToRegister() []api.ClusterEvent {
+func (pl *GPU) EventsToRegister() []api.ClusterEvent {
 	return []api.ClusterEvent{
 		{Resource: api.Node, ActionType: api.Add},
 	}

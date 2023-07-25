@@ -10,3 +10,5 @@
   ``go build main.go``
 - Run the wasm extender scheduler.
   ``./main --config ../../../examples/gpu/scripts/sched-config.yaml``
+
+# kubectl taint nodes node1 key1=value1:NoSchedule
